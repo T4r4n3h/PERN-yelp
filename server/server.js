@@ -1,17 +1,19 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors')
 const db = require('./db')
 const morgan = require('morgan');
 
+
 const app = express();
-
-
+//middleware
+app.use(cors());
 app.use(express.json());
 
 
 
 //Routes
-//ALL Restuarants
+//ALL Restaurants
 app.get('/api/v1/restaurants', async(req, res) => {
 
     try{
@@ -29,7 +31,7 @@ app.get('/api/v1/restaurants', async(req, res) => {
         console.log(err)
     }
 });
-//GET One Restuarant
+//GET One Restaurant
 app.get('/api/v1/restaurants/:id', async (req, res) => {
     try{
 
