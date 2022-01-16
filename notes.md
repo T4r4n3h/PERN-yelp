@@ -51,5 +51,5 @@ npm i morgan
 
 ## FRONT END REACT SET UP
 1. move to client directory
-2. npx install create-react-app client
-3.
+2. npx install create-react-app 
+3. npm install react-router-dom 
